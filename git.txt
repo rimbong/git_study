@@ -34,16 +34,48 @@ git diff	=>	j/k 스크콜바 조작 / q 종료
 	git switch 브랜치명
 	
 	3. branch 합쳐주기
-	git merge 합치려는브랜치명
+	중심 branch(master,main)로 이동후 git merge 합치려는브랜치명
 	
 	4. conflict
 	충돌(conflict)은 수동으로 코드를 고친후 git add -> git commit
 
 다양한 merge 방법
-	1. 3-way merge 
-	 각 브랜치에 신규 commit이 있는 경우
+	1. 3-way merge ( 일반적인 방법 )
+	 각 브랜치에 신규 commit이 있는 경우 
+	2. fast-forward (문제가 안된다면 자동으로 된다.)
+	 main(master)에 따로 commit이 없는 경우 즉, 기준 브랜치에 신규 commit이 없는 경우 
+	 만들어논 브랜치를 main(master)로 설정한다.
+	
+	브랜치가 merge가 되도 브랜치가 자동으로 삭제 되지 않는다. 따라서 따로 삭제해줘야한다.
+	merge 완료된 브랜치 삭제는 git branch -d 브랜치명
+	merge 안한	 브랜치 삭제는 git branch -D 브랜치명
+	
+	*) 3-way-merge를 너무 남발하면 굉장히 더러워 진다. 따라서 나온 3,4번 방법
+
+	3. 시작점을 옮겨서 merge
+	 git rebase , fast-forward 방식과 유사하지만 차이는 시작점을 옮기는것이다.
+	 각 컷미이 아래와 같을떄	(1번에서 branch를 만든다고 생각하자)
+	 branch	a => b => c 
+	 main 	1 => 2
+	 여기서 a 지점을 2로 바꿔준후 fast-forward 하는것과 같다.
+	 branch	 	 a => b => c 
+	 main 	1 => 2
+	 단점으로는 conflict가 많이 날 수 있다.
+	 3-way merge 방식과 다르게 먼저 새로운 브랜치로 이동 후 명령어 : git rebase 중심브랜치명(main,master)  하면 된다.
+
+	4.squash and merge
+	branch	a => b => c 	
+	main 	1 => 2
+	이와 같이 있을 떄 이를	
+	main 	1 => 2 => c*  (선이 이어지는것 이나리 순간이동 느낌이다.)
+	와 같이 만들어주는 방식이다.
+	명령어 : git merge --squash 새브랜치
 
 
 
 
 
+
+
+
+	
