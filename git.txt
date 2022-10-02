@@ -27,17 +27,17 @@ git diff	=>	j/k 스크콜바 조작 / q 종료
 
 새로운 기능 추가
 원문의 복사본을 만들어 복사본에 작업후 합치는 원리라고 생각하면된다.
-1. branch 만들어주기
-git branch 브랜치명
-
-2. branch 간 이동 ( master 또한 master branch 이다.)
-git switch 브랜치명
-
-3. branch 합쳐주기
-git merge 합치려는브랜치명
-
-4. conflict
-충돌(conflict)은 수동으로 코드를 고친후 git add -> git commit
+	1. branch 만들어주기
+	git branch 브랜치명
+	
+	2. branch 간 이동 ( master 또한 master branch 이다.)
+	git switch 브랜치명
+	
+	3. branch 합쳐주기
+	git merge 합치려는브랜치명
+	
+	4. conflict
+	충돌(conflict)은 수동으로 코드를 고친후 git add -> git commit
 
 
 
