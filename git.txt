@@ -5,6 +5,12 @@ repository 파일 버전을 보관해둔다.
 git 설치 후 등록
 $ git config --global user.name "Your Name"
 $ git config --global user.email you@example.com
+$ git config --global -e   // 에디터로 수정
+$ git config --global core.editor "code"  // 에디터 수정시 vscode 로 수정
+$ git config --global core.autocrlf true  // 줄바꿈 문자열을 정해줌 window에 경우 해당함
+$ git config --global core.autocrlf input // 위와 같으며 mac에 해당함
+$ git config --global alias.st status	  // alias 설정 status => st
+$ git config --global
 ---------------------------------------------------------------------------
 vscode 를 켠후 작업 디렉토리를 포함시킨 상태에서 터미널을 연다. 이후
 git int	=> git 으로 부터 감시를 받는다. repository를 생성해준다.
@@ -14,8 +20,11 @@ git add 파일명 => git commit -m '메모'
 이렇게 두번의 과정을 나눈 이유
  - 기록이 필요 없는 파일들이 있기 떄문 (이미지 파일)
 ---------------------------------------------------------------------------
-			add					   commit
-작업폴더	<=>		staging area	<=>		local repository(로컬 저장소)
+				add						   	   commit
+작업폴더		<=>			staging area		<=>			local repository(로컬 저장소)
+untracked
+tracked(unmodified
+		,modified)
 ---------------------------------------------------------------------------
 여러 파일을 staging 하는 경우
 git add .
