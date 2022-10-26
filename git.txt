@@ -10,7 +10,7 @@ $ git config --global core.editor "code"  // 에디터 수정시 vscode 로 수�
 $ git config --global core.autocrlf true  // 줄바꿈 문자열을 정해줌 window에 경우 해당함
 $ git config --global core.autocrlf input // 위와 같으며 mac에 해당함
 $ git config --global alias.st status	  // alias 설정 status => st
-$ git config --global
+$ git config --list						// config 설정 정보 보기
 ---------------------------------------------------------------------------
 vscode 를 켠후 작업 디렉토리를 포함시킨 상태에서 터미널을 연다. 이후
 git int	=> git 으로 부터 감시를 받는다. repository를 생성해준다.
