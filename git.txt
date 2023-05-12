@@ -2,6 +2,26 @@ git
 파일 버전관리 프로그램
 repository 파일 버전을 보관해둔다.
 ---------------------------------------------------------------------------
+repository 만들기
+방법 2가지
+1.작업하던 폴더를 init > git 레파지토리 생성 > 연결(remote add)
+2.git 레파지토리 생성 > clone > clone 받은 폴더 안에서 작업
+
+1번 방법
+git bash 실행
+cd /c 
+cd 작업폴더경로
+git init
+
+이후 github 홈페이지에서 repository를 만든후 주소 복사
+git bash로 돌아와서
+git remote add origin 복사주소 : 원격 저장소완 연결
+git remote -v : 원격저장소 연결 확인
+
+이후로는 소스트리를 이용한다.
+
+2번 방법은 github 홈페이지에서 repository를 만든후 소스트리로 pull하여 작업하면된다.
+---------------------------------------------------------------------------
 git 설치 후 등록
 $ git config --global user.name "Your Name"
 $ git config --global user.email you@example.com
